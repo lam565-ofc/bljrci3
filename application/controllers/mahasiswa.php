@@ -25,7 +25,11 @@ class Mahasiswa extends CI_Controller
 		$alamat    = $this->input->post('alamat');
 		$email     = $this->input->post('email');
 		$no_telp   = $this->input->post('no_telp');
+		$foto      = $_FILES['foto'];
 		
+		if ($foto=''){} else { 
+			$config['upload_path'] = "./assets/foto"; 
+		}
 
 		$data = array (
 			'nama'      => $nama,
